@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react';
 import { ICategory } from '../../../type/Category';
 import { listCate } from '../../../api/Category';
 import axios from 'axios';
+
+
+
 type ProductAddProps = {
   // name: string,
   // desc: string,
@@ -33,8 +36,9 @@ const Add_pro = (props: ProductAddProps) => {
   const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
   const navigate = useNavigate();
   const onSubmit: SubmitHandler<TypeInputs> = async data => {
-    const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/duynv/image/upload";
-    const CLOUDINARY_PRESET = "okwdgnez";
+    
+    const CLOUDINARY_API = "https://api.cloudinary.com/v1_1/assignment22/image/upload";
+    const CLOUDINARY_PRESET = "imgproduct";
     const file = data.image[0];
     const formdata = new FormData();
     formdata.append("file", file);
@@ -47,7 +51,7 @@ const Add_pro = (props: ProductAddProps) => {
     data.image = response.data.url;
     props.onAdd(data);
 
-    // navigate("/admin/products")
+    navigate("/admin/products") //quay trở về list sản phẩm 
   }
   return (
     <div>
@@ -74,9 +78,9 @@ const Add_pro = (props: ProductAddProps) => {
           <label htmlFor="exampleInputPassword1" className="form-label">Image</label>
           <input type="file" className="form-control" {...register('image')} />
         </div>
-        <label htmlFor="exampleInputPassword1" className="form-label">Description</label>
+       
         <div className="mb-3">
-          
+        <label htmlFor="exampleInputPassword1" className="form-label">Description</label>
     <textarea cols={150} rows={8} className="border-solid-black bg-slate-200 rounded"{...register('desc')}/>
 
 

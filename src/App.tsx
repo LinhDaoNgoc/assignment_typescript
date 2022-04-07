@@ -110,7 +110,7 @@ function App() {
             <Route path='categorys'>
               <Route index element={<Category_list categorys={categorys} onRemoveCate={removecate} />} />
               <Route path='add' element={<Category_add name='duy' onAddcate={onHandlerCate} />} />
-              <Route path=':id/edit' element={<Category_edit onUpdateCate={onHandeleUpdateCate} />} />
+              <Route path=':slug/edit' element={<Category_edit onUpdateCate={onHandeleUpdateCate} />} />
             </Route>
           </Route>
           <Route path='/signup' element={<Signup />} />

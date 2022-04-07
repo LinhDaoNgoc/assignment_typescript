@@ -36,7 +36,7 @@ const Category_list = (props: Props) => {
             <th scope="row">{index+1}</th>
             <td>{item.name}</td>
             <td>
-            {/* <button className="btn btn-primary mr-1"><Link to={`/admin/categorys/${item._id}/edit`}>Update</Link></button> */}
+            <button className="btn btn-primary mr-1"><Link to={`/admin/categorys/${item.slug}/edit`}>Update</Link></button>
             <button className="btn btn-danger" onClick={()=>props.onRemoveCate(item._id)}>Delete</button>
             </td>
           </tr>

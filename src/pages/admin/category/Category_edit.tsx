@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useForm ,SubmitHandler} from 'react-hook-form'
 import { useNavigate, useParams,Link } from "react-router-dom"
-import { getcate } from '../../../api/Category'
+import { get } from '../../../api/Category'
 import { ICategory } from '../../../type/Category'
 import { Table,Space,Button, Breadcrumb } from 'antd';
 type Category_editProps={
@@ -16,16 +16,15 @@ type TypeInputs = {
 const Category_edit = (props:Category_editProps) => {
     const {register,handleSubmit,formState:{errors},reset}=useForm<TypeInputs>();  
     const navigate =  useNavigate();
-    const {id} = useParams();
+    const {slug} = useParams();
     useEffect(()=>{
         const getCategory = async()=>{
-            const {data} =await getcate(id);        
-            reset(data);
+            const {data} =await get(slug);        
+            reset(data.category);
         }
         getCategory();
     },[])
     const onSubmit:SubmitHandler<TypeInputs>=data=>{
-      console.log(id)
         props.onUpdateCate(data)
         navigate("/admin/categorys")
     }

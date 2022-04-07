@@ -60,14 +60,7 @@ const onSubmit:SubmitHandler<TypeInputs>= data=>{
         <div className="mb-3">
           
           <textarea cols={153} rows={10} className="bg-slate-200  rounded"{...register('desc')}/>
-        </div>
-        {/* <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">Image</label>
-          <input type="file" className="form-control" {...register('image')} />
-        </div> */}
-        
-            
-            
+        </div>           
             <button className="btn btn-primary">Update</button>
         </form>
     </div>
