@@ -79,17 +79,18 @@ const Header = () => {
         </div>
 
         <div className="icon ml-[0px] flex p-7">
-          {/* <div className="user ">  
+          <div className="user ">  
         
             <Link to="/signin" className="text-[#122031]  hover:text-[#2a4a84]  ease-in-out duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </Link>
-          </div> */}
+              <a href=""><p onClick={handlerRemove}>Đăng xuất</p></a>
+              <h1>xin chào: {useName()}</h1>
+          </div>
 
-          <div className="user">
-            {/* <Link to="/signin" className="text-[#122031]  hover:text-[#2a4a84]  ease-in-out duration-300">  */}
+          {/* <div className="user">
             <div className="login text-white hover:text-[#ffbe33] group">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +151,7 @@ const Header = () => {
                 )}
               </div>
             </div>
-            {/* </Link> */}
-          </div>
+          </div> */}
 
           <div className="cart">
             <Link
