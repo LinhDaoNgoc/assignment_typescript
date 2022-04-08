@@ -54,7 +54,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <div className="search xl:pt-[21px] xl:relative xl:block lg:pt-[7px] lg:relative lg:block hidden ml-[20px] ">
+        <div className="search xl:pt-[21px] xl:relative xl:block lg:pt-[7px] lg:relative lg:block hidden mr-[200px] ">
           <input
             type="text"
             placeholder="Tìm kiếm ở đây..."
@@ -79,7 +79,7 @@ const Header = () => {
         </div>
 
         <div className="icon ml-[0px] flex p-7">
-          <div className="user ">  
+          {/* <div className="user ">  
         
             <Link to="/signin" className="text-[#122031]  hover:text-[#2a4a84]  ease-in-out duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -88,7 +88,77 @@ const Header = () => {
               </Link>
               <a href=""><p onClick={handlerRemove}>Đăng xuất</p></a>
               <h1>xin chào: {useName()}</h1>
+          </div> */}
+          {/* login */}
+          <div className="login text-black group ml-[-110px] group ">
+      
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 mr-6 group-hover:text-[#ffbe33]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+            <div
+              className="in-up--sub absolute top-[60px] ml-[-39px] bg-white shadow-xl z-50 p-2 rounded-lg hidden ease-linear duration-300 w-[150px]  group-hover:block before:absolute before:-top-2 before:left-10 before:w-5 before:h-5 before:bg-white before:rounded before:rotate-45 before:z-10 before:shadow-xl"
+            >
+              {localStorage.getItem("user") ? (
+                <div>
+                  <div className="flex items-center pb-3 w-full">
+                    <div className="ml-4">
+                      <div className="text-sm text-gray-500">Xin chào !</div>
+                      <div>
+                        <span className="user-name text-sm font-medium text-gray-900">
+                          {useName()}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li className="rounded-lg hover:bg-[#d0c0b9] ">
+                      <Link className="inline-block p-2" to="/admin">
+                        <span className="text-black font-semibold">
+                          Trang quản trị
+                        </span>
+                      </Link>
+                    </li>
+                    <li
+                      className="logout rounded-lg hover:bg-[#d0c0b9] cursor-pointer"
+                      onClick={handlerRemove}
+                    >
+                      <span className="inline-block p-2 font-semibold">
+                        Đăng xuất
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                <ul>
+                  <li className="rounded-lg hover:bg-[#d0c0b9] hover:text-white">
+                    <Link className="inline-block p-2" to="/signin">
+                      <span className="text-black font-semibold">
+                        Đăng nhập
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="rounded-lg hover:bg-[#d0c0b9] hover:text-white">
+                    <Link className="inline-block p-2" to="/signup">
+                      <span className="text-black font-semibold">Đăng ký</span>
+                    </Link>
+                  </li>
+                </ul>
+              )}
+            </div>
           </div>
+
+          {/* end login */}
 
           {/* <div className="user">
             <div className="login text-white hover:text-[#ffbe33] group">
