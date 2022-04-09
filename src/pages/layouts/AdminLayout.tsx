@@ -42,16 +42,22 @@ const AdminLayout = (props: Props) => {
         <Menu.Item key="3" icon={<DesktopOutlined />}>
           <Link to={"/admin/categorys"}>Category</Link>
         </Menu.Item>
+        <Menu.Item key="4" icon={<DesktopOutlined />}>
+          <Link to={"/admin/slider"}>Slider</Link>
+        </Menu.Item>
+        <Menu.Item key="5" icon={<DesktopOutlined />}>
+          <Link to={"/admin/user"}>User</Link>
+        </Menu.Item>
       </Menu>
     </Sider>
     <Layout className="site-layout">
-      {/* <Header className="site-layout-background " style={{ padding: 0 }} /> */}
+      {/* <Header className="site-layout-background " style={{ padding: 10 }} /> */}
       <Content style={{ margin: '0 16px' }}>
         <div className="site-layout-background bg-white" style={{ padding: 24, minHeight: 360 }}>
           <Outlet/>
         </div>
       </Content>
-      {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
+      <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
     </Layout>
   </Layout>
   )

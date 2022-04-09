@@ -17,7 +17,7 @@ const ProductManager = (props: Props) => {
           <Breadcrumb.Item>Product</Breadcrumb.Item>
         </Breadcrumb></div>
         <div className="col-1">
-          <Link to="/admin/products/add">
+          <Link to="/admin/products/add/:userId">
           <button type="button"  className="bg-[#cecccc] rounded hover:text-[#2a4a84] hover:bg-slate-200 p-3">Add</button>
           </Link>
           </div>
