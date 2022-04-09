@@ -23,15 +23,14 @@ import PrivateRouter from './components/PrivateRouter';
 import { notification, Slider } from 'antd';
 import DetailProduct from './pages/DetailProduct';
 import DetailCate from './pages/DetailCate';
-import { IPost } from './type/Post';
-import { addPost, listpost } from './api/Post';
+
+
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [products, setProducts] = useState<IProduct[]>([]);
   const [categorys, setCategorys] = useState<ICategory[]>([]);
-  const [posts,setPosts] = useState<IPost[]>([]);
   // --------------products-------------------
   useEffect(() => {
     const getProducts = async () => {
@@ -70,16 +69,17 @@ function App() {
     }
     getCategorys();
   }, [])
-  // delete-----------------------------------
+  // delete
   const removecate = (id: number) => {
     removeCate(id)
     setCategorys(categorys.filter(item => item._id !== id))
   }
-  // add------------------------------------------
+  // add
   const onHandlerCate = async (category: ICategory) => {
     const { data } = await addcate(category);
     setCategorys([...categorys, data])
   }
+  //update
   const onHandeleUpdateCate = async (category: ICategory) => {
     const { data } = await updatecate(category);
     setCategorys(categorys.map(item => item._id == data.id ? data : item));
