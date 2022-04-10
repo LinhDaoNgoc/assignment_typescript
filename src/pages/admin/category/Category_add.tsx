@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {SubmitHandler, useForm} from 'react-hook-form';
 import {Link, useNavigate} from 'react-router-dom';
 import { Table,Space,Button, Breadcrumb } from 'antd';
@@ -11,10 +11,16 @@ type TypeInputs={
   slug:string,
 }
 const Category_add = (props:CategoryAddProps) => {
+  //use state
+const [products, setProducts] = useState(1);
+
 const {register,handleSubmit,formState:{errors}} = useForm<TypeInputs>();
 const navigate = useNavigate();
 const onSubmit:SubmitHandler<TypeInputs>=data=>{
     props.onAddcate(data);
+    //usestate
+    setProducts(0);
+   
     // navigate("/admin/categorys");
 }
   return (

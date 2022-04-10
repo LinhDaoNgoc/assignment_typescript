@@ -4,7 +4,7 @@ export const authenticated = (user:User,next:()=>void)=>{
     next();
 }
 export const isAuthenticate = ()=>{
-    if(!localStorage.getItem('user'))return;
+    if(!localStorage.getItem('user'))return 'user';
     return JSON.parse(localStorage.getItem('user')as string)
 }
 export const useName = ()=>{
