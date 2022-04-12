@@ -23,6 +23,7 @@ import PrivateRouter from './components/PrivateRouter';
 import { notification, Slider } from 'antd';
 import DetailProduct from './pages/DetailProduct';
 import DetailCate from './pages/DetailCate';
+import Cart from './components/cart';
 
 
 
@@ -96,6 +97,7 @@ function App() {
             <Route path='categorys/:slug' element={<DetailCate />} />
             <Route path='product' element={<h1>Hien thi san pham 123</h1>} />
             <Route path='about' element={<h1>About</h1>} />
+            <Route path='cart' element={<Cart />} />
           </Route>
 
 

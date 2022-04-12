@@ -3,7 +3,6 @@ import { list } from "../api/Product";
 import { IProduct } from "../type/Product";
 import { Breadcrumb, Rate } from "antd";
 import { Link } from "react-router-dom";
-import Blog from "./Blog";
 const desc = ["terrible", "bad", "normal", "good", "wonderful"];
 type Props = {};
 const Home = (props: Props) => {
@@ -57,7 +56,7 @@ const Home = (props: Props) => {
                               product-id={32}
                               status-store={0}
                             >
-                              Mua hàng
+                              Mua ngay
                             </a>
                           </div>
                         </div>
@@ -69,25 +68,6 @@ const Home = (props: Props) => {
             );
           })}
         </div>
-
-        {/* <div className="container">
-          <div className="row">
-            <div className="col">
-              1 of 2
-            </div>
-            <div className="col">
-              2 of 2
-            </div>
-          </div>
-        </div> */}
-        {/* <div className="block-news box-product ">
-          <h2 className="title-block-product text-center"> Tin tức &amp; Blog<br /> <i className="icon-title-1" />
-          </h2>
-          <div className="container">
-            <Blog />
-          </div>
-
-        </div> */}
       </div>
     </div>
   );
