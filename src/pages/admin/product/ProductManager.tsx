@@ -17,7 +17,7 @@ const ProductManager = (props: Props) => {
           <Breadcrumb.Item>Product</Breadcrumb.Item>
         </Breadcrumb></div>
         <div className="col-1">
-          <Link to="/admin/products/add/:userId">
+          <Link to="/admin/products/add">
           <button type="button"  className="bg-[#cecccc] rounded hover:text-[#2a4a84] hover:bg-slate-200 p-3">Add</button>
           </Link>
           </div>
@@ -48,7 +48,7 @@ const ProductManager = (props: Props) => {
                 <td className="w-[110px]">{item.price}</td>
                 <td>{item.desc}</td>
                 <td>
-                  <img src={item.image} alt="" width={600} />
+                  <img src={item.image} alt="" width={200} />
                 </td>
                 {/* <td>{item.description}</td> */}
                 <td>{item.category}
