@@ -33,7 +33,7 @@ const Header = () => {
             </li>
             <li className="inline-block">
               <NavLink
-                to="/detail"
+                to="/product"
                 className="inline-block py-[10px] px-[20px] text-slate-600 hover:font-bold focus:text-[#235e12] hover:text-[#2a4a84]  ease-in-out duration-200 no-underline"
               >
                 Sản Phẩm
@@ -41,7 +41,7 @@ const Header = () => {
             </li>
             <li className="inline-block">
               <NavLink
-                to="#"
+                to="/new"
                 className="inline-block py-[10px] px-[20px] text-slate-600  hover:font-bold focus:text-[#235e12] hover:text-[#2a4a84]  ease-in-out duration-200 no-underline"
               >
                 Tin tức

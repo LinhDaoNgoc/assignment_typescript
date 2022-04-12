@@ -24,6 +24,7 @@ import { notification, Slider } from 'antd';
 import DetailProduct from './pages/DetailProduct';
 import DetailCate from './pages/DetailCate';
 import Cart from './components/cart';
+import New from './components/new';
 
 
 
@@ -95,9 +96,10 @@ function App() {
             <Route index element={<Home />} />
             <Route path='producst/detail/:id' element={<DetailProduct />} />
             <Route path='categorys/:slug' element={<DetailCate />} />
-            <Route path='product' element={<h1>Hien thi san pham 123</h1>} />
-            <Route path='about' element={<h1>About</h1>} />
+            <Route path='product' element={<Home/>} />
+            <Route path='new' element={<New/>} />
             <Route path='cart' element={<Cart />} />
+            
           </Route>
 
 
