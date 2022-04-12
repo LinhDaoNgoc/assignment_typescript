@@ -21,7 +21,7 @@ const onSubmit:SubmitHandler<TypeInputs>=data=>{
     //usestate
     setProducts(0);
    
-    // navigate("/admin/categorys");
+    navigate("/admin/categorys");
 }
   return (
     <div>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm ,SubmitHandler} from 'react-hook-form'
 import { useNavigate, useParams,Link } from "react-router-dom"
 import { get } from '../../../api/Category'
@@ -14,19 +14,24 @@ type TypeInputs = {
 }
 
 const Category_edit = (props:Category_editProps) => {
+
+     
     const {register,handleSubmit,formState:{errors},reset}=useForm<TypeInputs>();  
     const navigate =  useNavigate();
     const {slug} = useParams();
+
     useEffect(()=>{
         const getCategory = async()=>{
             const {data} =await get(slug);        
             reset(data.category);
+      
         }
         getCategory();
     },[])
     const onSubmit:SubmitHandler<TypeInputs>=data=>{
         props.onUpdateCate(data)
         navigate("/admin/categorys")
+
     }
     return (
     <div>
